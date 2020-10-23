@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/shawn/CLionProjects/282Program4/main.cpp" "/Users/shawn/CLionProjects/282Program4/cmake-build-debug/CMakeFiles/282Program4.dir/main.cpp.o"
-  "/Users/shawn/CLionProjects/282Program4/upDate.cpp" "/Users/shawn/CLionProjects/282Program4/cmake-build-debug/CMakeFiles/282Program4.dir/upDate.cpp.o"
+  "/Users/shawn/Documents/GitHub/282Project4/282Program4/main.cpp" "/Users/shawn/Documents/GitHub/282Project4/282Program4/cmake-build-debug/CMakeFiles/282Program4.dir/main.cpp.o"
+  "/Users/shawn/Documents/GitHub/282Project4/282Program4/upDate.cpp" "/Users/shawn/Documents/GitHub/282Project4/282Program4/cmake-build-debug/CMakeFiles/282Program4.dir/upDate.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

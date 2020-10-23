@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/shawn/CLionProjects/282Program4/upDate.cpp
+/Users/shawn/Documents/GitHub/282Project4/282Program4/main.cpp
+iostream
+-
 upDate.h
-/Users/shawn/CLionProjects/282Program4/upDate.h
+/Users/shawn/Documents/GitHub/282Project4/282Program4/upDate.h
 
-/Users/shawn/CLionProjects/282Program4/upDate.h
+/Users/shawn/Documents/GitHub/282Project4/282Program4/upDate.cpp
+ostream
+-
+upDate.h
+/Users/shawn/Documents/GitHub/282Project4/282Program4/upDate.h
+
+/Users/shawn/Documents/GitHub/282Project4/282Program4/upDate.h
 string
 -
 

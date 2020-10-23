@@ -2,20 +2,24 @@
 // Created by Shawn on 10/21/20.
 //
 
+#include <ostream>
 #include "upDate.h"
 
 upDate::upDate():upDate(5, 11, 1959) {}
 
 upDate::upDate(int M, int D, int Y) {
-
+    date = new int[3];
+    setDate(M, D, Y);
+    dateCount++;
 }
 
 upDate::upDate(int J) {
-
+    date = new int[3];
+    setGregorian(J);
+    dateCount++;
 }
 
-upDate::upDate(const upDate &U) {
-
+upDate::upDate(const upDate &U):upDate(U.date[0], U.date[1], U.date[2]) {
 }
 
 upDate::~upDate() {
@@ -41,29 +45,38 @@ int upDate::getYear() {
 }
 
 string upDate::getMonthName() {
-    return std::string();
+    std::string months [] {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    return months[julian() - 1];
 }
 
-upDate upDate::operator=(upDate U) {
-    return upDate();
+upDate &upDate::operator=(upDate U) {
+    this->setDate(U.getMonth(), U.getDay(), U.getYear());
+    return *this;
 }
 
 upDate upDate::operator+=(upDate U) {
-    return upDate();
+    this->setGregorian(julian() + U.julian());
+    return *this;
 }
 
 upDate upDate::operator-=(upDate U) {
-    return upDate();
+    *this = *this - U;
+    return *this;
 }
 
 upDate upDate::operator+(upDate U) {
-    upDate ret;
-    ret.setGregorian(julian() + U.julian());
-    return ret;
+    *this = *this + U;
+    return *this;
 }
 
 upDate upDate::operator-(upDate U) {
-    return upDate();
+    upDate ret;
+    ret.setGregorian(julian() - U.julian());
+    return ret;
+}
+
+int upDate::operator-(int i) {
+    return julian() - i;
 }
 
 upDate upDate::operator+(int U) {
@@ -72,7 +85,7 @@ upDate upDate::operator+(int U) {
    return ret;
 }
 
-int upDate::GetDateCount() {
+ int upDate::GetDateCount() {
     return dateCount;
 }
 
@@ -116,4 +129,13 @@ void upDate::setGregorian(int JD) {
     date[2] = I;
     date[0] = J;
     date[1] = K;
+}
+
+ostream& operator<<(ostream &os, upDate &U) {
+    os << U.getMonth() << ", " << U.getDay() << " " << U.getYear();
+    return os;
+}
+
+upDate::operator int() {
+    return julian();
 }
