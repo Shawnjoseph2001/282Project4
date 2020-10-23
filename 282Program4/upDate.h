@@ -27,6 +27,7 @@ public:
     upDate operator-(upDate U);
     int operator-(int U);
     operator int();
+    operator string();
     upDate operator+(int U);
     friend ostream& operator<<(ostream &os, upDate &U);
     static int GetDateCount();

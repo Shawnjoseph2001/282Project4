@@ -18,7 +18,7 @@ upDate::upDate(int J) {
     setGregorian(J);
     dateCount++;
 }
-
+int upDate::dateCount = 0;
 upDate::upDate(const upDate &U):upDate(U.date[0], U.date[1], U.date[2]) {
 }
 
@@ -132,10 +132,13 @@ void upDate::setGregorian(int JD) {
 }
 
 ostream& operator<<(ostream &os, upDate &U) {
-    os << U.getMonth() << ", " << U.getDay() << " " << U.getYear();
-    return os;
+    os << string(U);
 }
 
 upDate::operator int() {
     return julian();
+}
+
+upDate::operator string() {
+    return to_string(this->getMonth()) + "/" + to_string(this->getDay()) + "/" + to_string(this->getYear());
 }
