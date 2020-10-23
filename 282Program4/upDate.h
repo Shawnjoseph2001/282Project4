@@ -22,18 +22,18 @@ public:
     string getMonthName();
     upDate& operator= (upDate U);
     upDate operator+=(upDate U);
-    upDate operator-=(upDate U);
+    upDate operator-=(const upDate& U);
     upDate operator+(upDate U);
     upDate operator-(upDate U);
     int operator-(int U);
-    explicit operator int();
+    operator int();
     upDate operator+(int U);
     friend ostream& operator<<(ostream &os, upDate &U);
     static int GetDateCount();
     upDate operator++();
     upDate operator++(int);
     upDate operator--();
-    upDate operator--(int);
+    const upDate operator--(int);
     int julian();
 
 

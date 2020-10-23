@@ -23,7 +23,6 @@ upDate::upDate(const upDate &U):upDate(U.date[0], U.date[1], U.date[2]) {
 }
 
 upDate::~upDate() {
-    delete[] date;
 }
 
 void upDate::setDate(int M, int D, int Y) {
@@ -59,14 +58,15 @@ upDate upDate::operator+=(upDate U) {
     return *this;
 }
 
-upDate upDate::operator-=(upDate U) {
+upDate upDate::operator-=(const upDate& U) {
     *this = *this - U;
     return *this;
 }
 
 upDate upDate::operator+(upDate U) {
-    *this = *this + U;
-    return *this;
+    upDate ret;
+    ret.setGregorian(julian() + U.julian());
+    return ret;
 }
 
 upDate upDate::operator-(upDate U) {
@@ -90,19 +90,19 @@ upDate upDate::operator+(int U) {
 }
 
 upDate upDate::operator++() {
-    return upDate() + 1;
+    return *this + 1;
 }
 
 upDate upDate::operator++(int) {
-    return upDate() + 1;
+    return *this + 1;
 }
 
 upDate upDate::operator--() {
-    return upDate() - 1;
+    return *this - 1;
 }
 
-upDate upDate::operator--(int) {
-    return upDate() - 1;
+const upDate upDate::operator--(int) {
+    return *this - 1;
 }
 
 int upDate::julian() {

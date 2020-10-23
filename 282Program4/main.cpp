@@ -4,9 +4,9 @@
 int main() {
 upDate D1(10,27,2010); 	// overloaded constructor
 upDate D2(D1); 	// copy constructor
-upDate D3 = D2;
+upDate D3 = D2;// also copy constructor – initialize D3 to be copy of D2
 upDate D4;
-upDate D5;// also copy constructor – initialize D3 to be copy of D2
+upDate D5;
 D1 = D2;		// assignment operator
 D1 += 5;		// add 5 days to D1, result is stored in D1
 D1 -= 7;			// subtract 7 days from D1, result is stored in D1
