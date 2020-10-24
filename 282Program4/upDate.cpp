@@ -19,7 +19,7 @@ upDate::upDate(int J) {
     dateCount++;
 }
 int upDate::dateCount = 0;
-upDate::upDate(const upDate &U):upDate(U.date[0], U.date[1], U.date[2]) {
+upDate::upDate(upDate const &U): upDate(U.date[0], U.date[1], U.date[2]) {
 }
 
 upDate::~upDate() {
@@ -55,8 +55,8 @@ upDate &upDate::operator=(upDate U) {
     return *this;
 }
 
-upDate upDate::operator+=(upDate U) {
-    this->setGregorian(julian() + U.julian());
+upDate upDate::operator+=(const upDate& U) {
+    *this = *this + U;
     return *this;
 }
 
@@ -66,15 +66,11 @@ upDate upDate::operator-=(const upDate& U) {
 }
 
 upDate upDate::operator+(upDate U) {
-    upDate ret;
-    ret.setGregorian(julian() + U.julian());
-    return ret;
+    return upDate(julian() + U.julian());
 }
 
 upDate upDate::operator-(upDate U) {
-    upDate ret;
-    ret.setGregorian(julian() - U.julian());
-    return ret;
+    return upDate(julian() - U.julian());
 }
 
 int upDate::operator-(int i) {
@@ -95,7 +91,7 @@ upDate upDate::operator++() {
     return *this = *this + 1;
 }
 
-upDate upDate::operator++(int) {
+const upDate upDate::operator++(int) {
     return *this = *this + 1;
 }
 
@@ -103,7 +99,7 @@ upDate upDate::operator--() {
     return *this = *this - 1;
 }
 
-upDate upDate::operator--(int) {
+const upDate upDate::operator--(int) {
     return *this = *this - 1;
 }
 

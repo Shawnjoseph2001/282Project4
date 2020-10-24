@@ -21,7 +21,7 @@ public:
     int getYear();
     string getMonthName();
     upDate& operator= (upDate U);
-    upDate operator+=(upDate U);
+    upDate operator+=(const upDate& U);
     upDate operator-=(const upDate& U);
     upDate operator+(upDate U);
     upDate operator-(upDate U);
@@ -32,9 +32,9 @@ public:
     friend ostream& operator<<(ostream &os, upDate &U);
     static int GetDateCount();
     upDate operator++();
-    upDate operator++(int);
+    const upDate operator++(int);
     upDate operator--();
-    upDate operator--(int);
+    const upDate operator--(int);
     bool operator==(upDate U);
     bool operator>(upDate U);
     bool operator<(upDate U);
