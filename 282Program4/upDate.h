@@ -34,7 +34,10 @@ public:
     upDate operator++();
     upDate operator++(int);
     upDate operator--();
-    const upDate operator--(int);
+    upDate operator--(int);
+    bool operator==(upDate U);
+    bool operator>(upDate U);
+    bool operator<(upDate U);
     int julian();
 
 

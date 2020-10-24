@@ -26,6 +26,17 @@ cout << D3 << endl;
 upDate D5 = upDate(9, 2, 2029);
 upDate D4 = upDate( 7, 29, 2020);// subtract 4 days from D2, assign result to D3
 int x = D5 - D4;
+D1 = upDate(10, 27, 2010);
 cout << x << endl;
+cout << D1 << endl; 	 	// will print “10/27/2010”
+D1++;			// increment D1 by one day – postfix style
+cout << D1 << endl; 	 	// will print “10/27/2010”
+++D1; 			// also increment D1 by one day – prefix style
+cout << D1 << endl; 	 	// will print “10/27/2010”
+D1--; 			// decrement D1 by one day – postfix style
+cout << D1 << endl; 	 	// will print “10/27/2010”
+--D1; 			// decrement D1 by one day – prefix style
+cout << D1 << endl; 	 	// will print “10/27/2010”
+cout << D1.julian() << endl;	// print the Julian integer represented by D1
 cout << upDate::GetDateCount() << endl;
 }

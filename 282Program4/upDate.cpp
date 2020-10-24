@@ -23,6 +23,8 @@ upDate::upDate(const upDate &U):upDate(U.date[0], U.date[1], U.date[2]) {
 }
 
 upDate::~upDate() {
+    delete[] date;
+    dateCount--;
 }
 
 void upDate::setDate(int M, int D, int Y) {
@@ -81,7 +83,7 @@ int upDate::operator-(int i) {
 
 upDate upDate::operator+(int U) {
     upDate ret;
-    setGregorian(julian() + U);
+    ret.setGregorian(julian() + U);
    return ret;
 }
 
@@ -90,19 +92,19 @@ upDate upDate::operator+(int U) {
 }
 
 upDate upDate::operator++() {
-    return *this + 1;
+    return *this = *this + 1;
 }
 
 upDate upDate::operator++(int) {
-    return *this + 1;
+    return *this = *this + 1;
 }
 
 upDate upDate::operator--() {
-    return *this - 1;
+    return *this = *this - 1;
 }
 
-const upDate upDate::operator--(int) {
-    return *this - 1;
+upDate upDate::operator--(int) {
+    return *this = *this - 1;
 }
 
 int upDate::julian() {
@@ -133,6 +135,7 @@ void upDate::setGregorian(int JD) {
 
 ostream& operator<<(ostream &os, upDate &U) {
     os << string(U);
+    return os;
 }
 
 upDate::operator int() {
@@ -141,4 +144,16 @@ upDate::operator int() {
 
 upDate::operator string() {
     return to_string(this->getMonth()) + "/" + to_string(this->getDay()) + "/" + to_string(this->getYear());
+}
+
+bool upDate::operator==(upDate U) {
+    return julian() == U.julian();
+}
+
+bool upDate::operator<(upDate U) {
+    return julian() < U.julian();
+}
+
+bool upDate::operator>(upDate U) {
+    return julian() > U.julian();
 }
