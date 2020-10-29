@@ -25,7 +25,7 @@ public:
     upDate operator-=(const upDate& U);
     upDate operator+(upDate U);
     upDate operator-(upDate U);
-    int operator-(int U);
+    upDate operator-(int U);
     operator int();
     operator string();
     upDate operator+(int U);

@@ -74,7 +74,7 @@ upDate upDate::operator-(upDate U) {
 }
 
 int upDate::operator-(int i) {
-    return julian() - i;
+    return julian()- i;
 }
 
 upDate upDate::operator+(int U) {

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "282Program4"
   "282Program4.pdb"
-  "CMakeFiles/282Program4.dir/main.cpp.o"
+  "CMakeFiles/282Program4.dir/testupDate.cpp.o"
   "CMakeFiles/282Program4.dir/upDate.cpp.o"
 )
 

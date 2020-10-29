@@ -143,32 +143,32 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/282Program4.dir/build.make CMakeFiles/282Program4.dir/build
 .PHONY : 282Program4/fast
 
-main.o: main.cpp.o
+testupDate.o: testupDate.cpp.o
 
-.PHONY : main.o
+.PHONY : testupDate.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/282Program4.dir/build.make CMakeFiles/282Program4.dir/main.cpp.o
-.PHONY : main.cpp.o
+testupDate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/282Program4.dir/build.make CMakeFiles/282Program4.dir/testupDate.cpp.o
+.PHONY : testupDate.cpp.o
 
-main.i: main.cpp.i
+testupDate.i: testupDate.cpp.i
 
-.PHONY : main.i
+.PHONY : testupDate.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/282Program4.dir/build.make CMakeFiles/282Program4.dir/main.cpp.i
-.PHONY : main.cpp.i
+testupDate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/282Program4.dir/build.make CMakeFiles/282Program4.dir/testupDate.cpp.i
+.PHONY : testupDate.cpp.i
 
-main.s: main.cpp.s
+testupDate.s: testupDate.cpp.s
 
-.PHONY : main.s
+.PHONY : testupDate.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/282Program4.dir/build.make CMakeFiles/282Program4.dir/main.cpp.s
-.PHONY : main.cpp.s
+testupDate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/282Program4.dir/build.make CMakeFiles/282Program4.dir/testupDate.cpp.s
+.PHONY : testupDate.cpp.s
 
 upDate.o: upDate.cpp.o
 
@@ -206,9 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 282Program4"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... testupDate.o"
+	@echo "... testupDate.i"
+	@echo "... testupDate.s"
 	@echo "... upDate.o"
 	@echo "... upDate.i"
 	@echo "... upDate.s"

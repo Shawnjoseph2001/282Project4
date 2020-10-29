@@ -77,22 +77,9 @@ include CMakeFiles/282Program4.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/282Program4.dir/flags.make
 
-CMakeFiles/282Program4.dir/main.cpp.o: CMakeFiles/282Program4.dir/flags.make
-CMakeFiles/282Program4.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shawn/Documents/GitHub/282Project4/282Program4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/282Program4.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/282Program4.dir/main.cpp.o -c /Users/shawn/Documents/GitHub/282Project4/282Program4/main.cpp
-
-CMakeFiles/282Program4.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/282Program4.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shawn/Documents/GitHub/282Project4/282Program4/main.cpp > CMakeFiles/282Program4.dir/main.cpp.i
-
-CMakeFiles/282Program4.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/282Program4.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shawn/Documents/GitHub/282Project4/282Program4/main.cpp -o CMakeFiles/282Program4.dir/main.cpp.s
-
 CMakeFiles/282Program4.dir/upDate.cpp.o: CMakeFiles/282Program4.dir/flags.make
 CMakeFiles/282Program4.dir/upDate.cpp.o: ../upDate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shawn/Documents/GitHub/282Project4/282Program4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/282Program4.dir/upDate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shawn/Documents/GitHub/282Project4/282Program4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/282Program4.dir/upDate.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/282Program4.dir/upDate.cpp.o -c /Users/shawn/Documents/GitHub/282Project4/282Program4/upDate.cpp
 
 CMakeFiles/282Program4.dir/upDate.cpp.i: cmake_force
@@ -103,16 +90,29 @@ CMakeFiles/282Program4.dir/upDate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/282Program4.dir/upDate.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shawn/Documents/GitHub/282Project4/282Program4/upDate.cpp -o CMakeFiles/282Program4.dir/upDate.cpp.s
 
+CMakeFiles/282Program4.dir/testupDate.cpp.o: CMakeFiles/282Program4.dir/flags.make
+CMakeFiles/282Program4.dir/testupDate.cpp.o: ../testupDate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shawn/Documents/GitHub/282Project4/282Program4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/282Program4.dir/testupDate.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/282Program4.dir/testupDate.cpp.o -c /Users/shawn/Documents/GitHub/282Project4/282Program4/testupDate.cpp
+
+CMakeFiles/282Program4.dir/testupDate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/282Program4.dir/testupDate.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shawn/Documents/GitHub/282Project4/282Program4/testupDate.cpp > CMakeFiles/282Program4.dir/testupDate.cpp.i
+
+CMakeFiles/282Program4.dir/testupDate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/282Program4.dir/testupDate.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shawn/Documents/GitHub/282Project4/282Program4/testupDate.cpp -o CMakeFiles/282Program4.dir/testupDate.cpp.s
+
 # Object files for target 282Program4
 282Program4_OBJECTS = \
-"CMakeFiles/282Program4.dir/main.cpp.o" \
-"CMakeFiles/282Program4.dir/upDate.cpp.o"
+"CMakeFiles/282Program4.dir/upDate.cpp.o" \
+"CMakeFiles/282Program4.dir/testupDate.cpp.o"
 
 # External object files for target 282Program4
 282Program4_EXTERNAL_OBJECTS =
 
-282Program4: CMakeFiles/282Program4.dir/main.cpp.o
 282Program4: CMakeFiles/282Program4.dir/upDate.cpp.o
+282Program4: CMakeFiles/282Program4.dir/testupDate.cpp.o
 282Program4: CMakeFiles/282Program4.dir/build.make
 282Program4: CMakeFiles/282Program4.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shawn/Documents/GitHub/282Project4/282Program4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable 282Program4"

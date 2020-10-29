@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/shawn/Documents/GitHub/282Project4/282Program4/main.cpp">
+		<Unit filename="/Users/shawn/Documents/GitHub/282Project4/282Program4/testupDate.cpp">
 			<Option target="282Program4"/>
 		</Unit>
 		<Unit filename="/Users/shawn/Documents/GitHub/282Project4/282Program4/upDate.cpp">
