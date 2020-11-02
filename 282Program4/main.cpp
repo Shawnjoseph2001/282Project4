@@ -1,6 +1,6 @@
 #include <iostream>
-#include "upDate.h"
-
+#include "upDate.cpp"
+/*
 int main() {
 upDate D1(10, 27, 2010);
 cout << D1 << endl;
@@ -40,3 +40,4 @@ cout << D1 << endl; 	 	// will print “10/27/2010”
 cout << D1.julian() << endl;	// print the Julian integer represented by D1
 cout << upDate::GetDateCount() << endl;
 }
+ */

@@ -2,8 +2,10 @@
 // Created by Shawn on 10/21/20.
 //
 
-#include <ostream>
+#include <string>
+#include <iostream>
 #include "upDate.h"
+
 
 upDate::upDate():upDate(5, 11, 1959) {}
 
@@ -56,26 +58,25 @@ upDate &upDate::operator=(upDate U) {
 }
 
 upDate upDate::operator+=(const upDate& U) {
-    *this = *this + U;
-    return *this;
+    return *this = *this + U;
 }
 
 upDate upDate::operator-=(const upDate& U) {
-    *this = *this - U;
-    return *this;
+    return *this = *this - U;
 }
 
 upDate upDate::operator+(upDate U) {
     return upDate(julian() + U.julian());
 }
 
-upDate upDate::operator-(upDate U) {
-    return upDate(julian() - U.julian());
+int upDate::operator-(upDate U) {
+    return julian() - U.julian();
 }
 
-int upDate::operator-(int i) {
-    return julian()- i;
+upDate upDate::operator-(int i) {
+    return upDate(julian() - i);
 }
+
 
 upDate upDate::operator+(int U) {
     upDate ret;
@@ -88,19 +89,19 @@ upDate upDate::operator+(int U) {
 }
 
 upDate upDate::operator++() {
-    return *this = *this + 1;
+    return *this += 1;
 }
 
-const upDate upDate::operator++(int) {
-    return *this = *this + 1;
+upDate upDate::operator++(int) {
+    return *this += 1;
 }
 
 upDate upDate::operator--() {
-    return *this = *this - 1;
+    return *this -= 1;
 }
 
-const upDate upDate::operator--(int) {
-    return *this = *this - 1;
+upDate upDate::operator--(int) {
+    return *this -= 1;
 }
 
 int upDate::julian() {
@@ -129,8 +130,8 @@ void upDate::setGregorian(int JD) {
     date[1] = K;
 }
 
-ostream& operator<<(ostream &os, upDate &U) {
-    os << string(U);
+ostream& operator<<(ostream &os, upDate U) {
+    os << string(U) << endl;
     return os;
 }
 
@@ -152,4 +153,8 @@ bool upDate::operator<(upDate U) {
 
 bool upDate::operator>(upDate U) {
     return julian() > U.julian();
+}
+
+upDate operator+(int num, upDate U) {
+    return upDate(U.julian() + num);
 }

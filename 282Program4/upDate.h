@@ -1,11 +1,8 @@
-//
-// Created by Shawn on 10/21/20.
-//
-#include <string>
-
-
 #ifndef INC_282PROGRAM4_UPDATE_H
 #define INC_282PROGRAM4_UPDATE_H
+
+#include <string>
+
 using namespace std;
 
 class upDate {
@@ -24,29 +21,27 @@ public:
     upDate operator+=(const upDate& U);
     upDate operator-=(const upDate& U);
     upDate operator+(upDate U);
-    upDate operator-(upDate U);
+    int operator-(upDate U);
     upDate operator-(int U);
-    operator int();
-    operator string();
+    explicit operator int();
+    explicit operator string();
     upDate operator+(int U);
-    friend ostream& operator<<(ostream &os, upDate &U);
+    friend ostream& operator<<(ostream &os, upDate U);
     static int GetDateCount();
     upDate operator++();
-    const upDate operator++(int);
+    upDate operator++(int);
     upDate operator--();
-    const upDate operator--(int);
+    upDate operator--(int);
     bool operator==(upDate U);
     bool operator>(upDate U);
     bool operator<(upDate U);
     int julian();
-
-
 
 private:
     int * date;
     static int dateCount;
     void setGregorian(int JD);
 };
-
+upDate operator+(int num, upDate U);
 
 #endif //INC_282PROGRAM4_UPDATE_H

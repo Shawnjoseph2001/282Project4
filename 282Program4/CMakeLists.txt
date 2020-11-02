@@ -3,4 +3,4 @@ project(282Program4)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(282Program4 upDate.cpp upDate.h testupDate.cpp)
+add_executable(282Program4 upDate.cpp testupDate.cpp upDate.h)
