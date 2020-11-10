@@ -1,10 +1,11 @@
+// upDate.h
+// Author: Shawn Joseph
+// Program #4 due date: 11/4/2020
+
 #ifndef INC_282PROGRAM4_UPDATE_H
 #define INC_282PROGRAM4_UPDATE_H
-
 #include <string>
-
 using namespace std;
-
 class upDate {
 public:
     upDate();
@@ -36,12 +37,12 @@ public:
     bool operator>(upDate U);
     bool operator<(upDate U);
     int julian();
+    friend upDate operator+(int num, upDate U);
 
 private:
     int * date;
     static int dateCount;
     void setGregorian(int JD);
 };
-upDate operator+(int num, upDate U);
 
 #endif //INC_282PROGRAM4_UPDATE_H

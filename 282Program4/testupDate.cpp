@@ -13,7 +13,7 @@ using namespace std;
 int main()
 {
 	upDate Bday;
-	upDate duedate(4,20,2020);
+	upDate duedate(11,4,2020);
 	upDate today(duedate);
 
 
@@ -34,7 +34,7 @@ int main()
 	cout << "If you turn this assignment in on "<<dtemp<<" then is will be late.\n";
 	cout << "It is due on "<<--dtemp<<" so don't be late.\n";
 	cout << "One week from due date is "<<duedate+7<<endl;
-	cout << "One week from due date is "<<7+duedate<<endl;
+     cout << "One week from due date is "<<7+duedate<<endl;
 	cout << "One week earlier from due date is "<<duedate-7<<endl;
 
 	cout << "Your professor was born on "<<Bday<<" : ";

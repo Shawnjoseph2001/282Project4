@@ -1,11 +1,10 @@
-//
-// Created by Shawn on 10/21/20.
-//
+// upDate.cpp
+// Author: Shawn Joseph
+// Program #4 due date: 11/4/2020
 
 #include <string>
 #include <iostream>
 #include "upDate.h"
-
 
 upDate::upDate():upDate(5, 11, 1959) {}
 
@@ -21,8 +20,7 @@ upDate::upDate(int J) {
     dateCount++;
 }
 int upDate::dateCount = 0;
-upDate::upDate(upDate const &U): upDate(U.date[0], U.date[1], U.date[2]) {
-}
+upDate::upDate(upDate const &U): upDate(U.date[0], U.date[1], U.date[2]) {}
 
 upDate::~upDate() {
     delete[] date;
@@ -53,7 +51,7 @@ string upDate::getMonthName() {
 }
 
 upDate &upDate::operator=(upDate U) {
-    this->setDate(U.getMonth(), U.getDay(), U.getYear());
+    setDate(U.getMonth(), U.getDay(), U.getYear());
     return *this;
 }
 
@@ -140,7 +138,7 @@ upDate::operator int() {
 }
 
 upDate::operator string() {
-    return to_string(this->getMonth()) + "/" + to_string(this->getDay()) + "/" + to_string(this->getYear());
+    return to_string(getMonth()) + "/" + to_string(getDay()) + "/" + to_string(getYear());
 }
 
 bool upDate::operator==(upDate U) {
